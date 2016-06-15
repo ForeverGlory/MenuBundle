@@ -114,6 +114,7 @@ class Menu extends BaseMenu
      * Child items
      *
      * @ORM\OneToMany(targetEntity="Menu", mappedBy="parent", cascade={"all"})
+     * @ORM\OrderBy({"weight" = "asc"})
      */
     protected $children = array();
 
