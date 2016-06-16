@@ -124,29 +124,6 @@ class Menu extends MenuItem implements MenuInterface
         return $this->link;
     }
 
-    public function getChildren()
-    {
-        $children = parent::getChildren();
-        if (!is_array($children)) {
-            $data = [];
-            try {
-                foreach ($children as $name => $child) {
-                    $data[$name] = $child;
-                }
-            } catch (Exception $exc) {
-                
-            }
-            $children = $data;
-        }
-        uasort($children, function(MenuInterface $a, MenuInterface $b) {
-            if ($a->getWeight() == $b->getWeight()) {
-                return 0;
-            }
-            return ($a->getWeight() < $b->getWeight()) ? 1 : -1;
-        });
-        return $children;
-    }
-
     public function setWeight($weight)
     {
         $this->weight = $weight;
