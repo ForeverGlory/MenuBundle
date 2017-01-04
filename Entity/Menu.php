@@ -52,7 +52,7 @@ class Menu extends BaseMenu
      *
      * @ORM\Column(name="route", type="array")
      */
-    protected $route;
+    protected $route = [];
 
     /**
      * Link
