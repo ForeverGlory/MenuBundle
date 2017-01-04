@@ -20,8 +20,17 @@
     "minimum-stability": "dev",
     "require": {
         "symfony/symfony": "~2.3|~3.0",
-        "knplabs/knp-menu-bundle": "~2.1"
+        "knplabs/knp-menu-bundle": "~2.1",
+        "php-kit/composer-bower-plugin": "~1.0"
     },
     "require-dev": {
+    },
+    "extra": {
+        "bower": {
+            "require": {
+                "jquery": "~2.0",
+                "jstree": "~3.2"
+            }
+        }
     }
 }
